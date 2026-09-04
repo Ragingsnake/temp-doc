@@ -1,0 +1,87 @@
+\hspace*{-1cm}
+\resizebox{\textwidth}{!}{
+
+\begin{ganttchart}[
+    x unit=0.6cm,
+    canvas/.append style={fill=none, draw=black!5, line width=1pt},
+    hgrid style/.style={draw=black!5, line width=.75pt},
+    vgrid={*1{draw=black!5, line width=.75pt}},
+    title/.style={draw=none, fill=none},
+    title label font=\bfseries,
+    title label node/.append style={below=2pt},
+    include title in canvas=false,
+    bar label font=\small\color{black!70},
+    bar label node/.append style={text width=8cm, align=left, font=\linespread{0}\selectfont},
+    bar/.append style={draw=none, fill=primaryblue},
+    group incomplete/.append style={fill=secondarygreen!50},
+    group left shift=0,
+    group right shift=0,
+    group height=.5,
+    group peaks tip position=0,
+    group label node/.append style={text width=8cm, align=left, font=\linespread{0}\bfseries},
+    milestone/.append style={fill=criticalred, draw=criticalred, rounded corners=0pt},
+    milestone label node/.append style={text width=6cm, align=right, left=1cm}
+]{1}{15}
+
+% Timeline
+\gantttitlelist{1,...,15}{1} \\
+
+% Nội dung 1
+
+\ganttgroup{Nội dung 1: Khảo sát và phân tích bài toán}{1}{3} \\
+\ganttbar{Khảo sát Traffic Engineering và dự đoán lưu lượng}{1}{1} \\
+\ganttbar{Nghiên cứu Federated Learning và Reinforcement Learning}{2}{2} \\
+\ganttbar{Khảo sát bộ dữ liệu và lựa chọn phương pháp}{3}{3} \\
+
+% Nội dung 2
+
+\ganttgroup{Nội dung 2: Thiết kế và xây dựng hệ thống}{4}{9} \\
+\ganttbar{Thiết kế kiến trúc hệ thống}{4}{5} \\
+\ganttbar{Xây dựng mô hình Federated Learning dự đoán lưu lượng}{5}{7} \\
+\ganttbar{Xây dựng mô hình Reinforcement Learning tối ưu TE}{5}{7} \\
+\ganttbar{Tích hợp các thành phần của hệ thống}{7}{9} \\
+
+% Nội dung 3
+
+\ganttgroup{Nội dung 3: Triển khai hệ thống mô phỏng và demo}{10}{12} \\
+\ganttbar{Xây dựng môi trường mô phỏng mạng}{10}{10} \\
+\ganttbar{Phát triển chương trình demo và dashboard}{10}{11} \\
+\ganttbar{Kiểm thử và hoàn thiện hệ thống}{11}{12} \\
+
+% Nội dung 4
+
+\ganttgroup{Nội dung 4: Thực nghiệm và đánh giá}{13}{15} \\
+\ganttbar{Thực hiện các kịch bản thực nghiệm}{13}{14} \\
+\ganttbar{Đánh giá kết quả và so sánh phương pháp}{13}{15} \\
+\ganttbar{Hoàn thiện báo cáo khóa luận}{14}{15} \\
+
+% Họp GVHD
+
+\ganttgroup{Làm việc với giảng viên hướng dẫn}{1}{15} \\
+
+\ganttmilestone[name=meeting1]{Gặp GVHD}{1}
+\ganttmilestone[name=meeting2]{}{4}
+\ganttmilestone[name=meeting3]{}{7}
+\ganttmilestone[name=meeting4]{}{10}
+\ganttmilestone[name=meeting5]{}{13}
+\ganttmilestone[name=meeting6]{}{15}
+
+\node[below] at (meeting1.south) {\footnotesize Lần 1};
+\node[below] at (meeting2.south) {\footnotesize Lần 2};
+\node[below] at (meeting3.south) {\footnotesize Lần 3};
+\node[below] at (meeting4.south) {\footnotesize Lần 4};
+\node[below] at (meeting5.south) {\footnotesize Lần 5};
+\node[below] at (meeting6.south) {\footnotesize Bảo vệ};
+
+\\
+
+% Báo cáo tiến độ
+
+\ganttmilestone{Báo cáo tiến độ}{3}
+\ganttmilestone{}{6}
+\ganttmilestone{}{9}
+\ganttmilestone{}{12}
+\ganttmilestone{}{15}
+
+\end{ganttchart}
+}

@@ -1,0 +1,19 @@
+% Nêu cụ thể mục tiêu của KLTN, đặc biệt phải nêu được mục tiêu cải tiến sẽ là gì so với thực trạng nêu trong phần tổng quan đề tài
+
+\subsection*{a) Mục tiêu tổng quát:}
+Mục tiêu của đề tài là xây dựng hệ thống dự đoán lưu lượng và điều khiển lưu lượng chủ động trong mạng ISP dựa trên SDN nhằm nâng cao hiệu quả sử dụng tài nguyên mạng, giảm tình trạng tắc nghẽn và cải thiện chất lượng dịch vụ. Hệ thống sử dụng Federated Learning để huấn luyện mô hình dự đoán lưu lượng từ dữ liệu phân tán tại các miền mạng. Kết quả dự đoán lưu lượng trong tương lai được kết hợp với trạng thái mạng hiện tại và cung cấp cho Reinforcement Learning để thực hiện Traffic Engineering, lựa chọn tuyến hoặc phương án phân bổ lưu lượng phù hợp. Các quyết định này được thực thi thông qua bộ điều khiển SDN nhằm điều khiển lưu lượng theo hướng chủ động. Qua đó, hệ thống hướng đến khả năng thích ứng với sự thay đổi của lưu lượng mạng trong khi vẫn đảm bảo không tiết bộ sơ đồ mạng trong các miền mạng.
+
+\subsection*{b) Mục tiêu cụ thể:}
+\begin{itemize}
+    \item \textbf{Thu thập và tiền xử lý dữ liệu:} lưu lượng mạng từ các bộ dữ liệu công khai hoặc môi trường mô phỏng SDN, đồng thời phân chia dữ liệu theo nhiều miền để mô phỏng kịch bản Federated Learning.
+
+    \item \textbf{Thiết kế và xây dựng hệ thống:} xây dựng kiến trúc điều khiển lưu lượng chủ động trên nền tảng SDN, trong đó các nút hoặc miền mạng thực hiện huấn luyện cục bộ thông qua FL Client, FL Server tổng hợp mô hình dự đoán, mô-đun RL sử dụng kết quả dự đoán kết hợp với trạng thái mạng để thực hiện Traffic Engineering, và SDN Controller thực thi các quyết định điều khiển trên mạng.
+
+    \item \textbf{Xây dựng mô hình dự đoán lưu lượng:} sử dụng Federated Learning để huấn luyện mô hình LSTM trên dữ liệu lưu lượng phân tán tại các miền mạng. Mô hình được sử dụng để dự đoán lưu lượng trong các khoảng thời gian tiếp theo. Kết quả dự đoán được cung cấp cho mô-đun Traffic Engineering để hỗ trợ quyết định điều khiển lưu lượng theo hướng chủ động.
+
+    \item \textbf{Xây dựng mô hình điều khiển định tuyến:} sử dụng Reinforcement Learning để lựa chọn tuyến hoặc phương án phân bổ lưu lượng dựa trên trạng thái mạng hiện tại và lưu lượng được dự đoán. Tác tử RL hướng đến giảm tắc nghẽn, giảm độ trễ, cân bằng tải và nâng cao hiệu quả sử dụng tài nguyên mạng. Quyết định của tác tử được chuyển đến SDN Controller để thực thi trên mạng.
+
+    \item \textbf{Triển khai và tích hợp hệ thống:} tích hợp mô hình Federated Learning, Reinforcement Learning và bộ điều khiển SDN nhằm tạo thành hệ thống điều khiển lưu lượng hoạt động thống nhất trong môi trường mô phỏng.
+
+    \item \textbf{Đánh giá hiệu quả hệ thống:} đánh giá thông qua các chỉ số như độ chính xác dự đoán, độ trễ, tỷ lệ sử dụng liên kết, thông lượng, tỷ lệ mất gói và khả năng giảm tắc nghẽn; đồng thời so sánh với các phương pháp định tuyến truyền thống hoặc các phương pháp không sử dụng FL và RL.
+\end{itemize}

@@ -1,0 +1,27 @@
+% Nêu tổng quan phương pháp thực hiện
+
+\begin{enumerate}
+    \item \textbf{Thu thập và phân tích dữ liệu:}
+    
+    Thu thập các bộ dữ liệu lưu lượng mạng từ các nguồn công khai hoặc môi trường mô phỏng, bao gồm thông tin về băng thông, độ trễ, tỷ lệ mất gói và mức sử dụng liên kết theo thời gian. Tiến hành tiền xử lý dữ liệu bằng cách loại bỏ giá trị bất thường, chuẩn hóa dữ liệu và trích xuất các đặc trưng cần thiết phục vụ cho quá trình huấn luyện mô hình. Đồng thời phân chia dữ liệu theo các nút hoặc miền mạng để mô phỏng quá trình huấn luyện phân tán trong Federated Learning.
+
+    \item \textbf{Môi trường triển khai:}
+
+    Hệ thống được triển khai trên nền tảng mã nguồn mở với hệ điều hành Ubuntu và ngôn ngữ lập trình Python nhằm đảm bảo tính linh hoạt và khả năng mở rộng. Mạng SDN được mô phỏng bằng Mininet sử dụng topo NSFNET, kết hợp bộ điều khiển Ryu thông qua giao thức OpenFlow. Mô hình dự đoán lưu lượng được xây dựng bằng PyTorch và huấn luyện theo cơ chế Federated Learning với framework Flower, sử dụng mô hình LSTM và thuật toán FedAdam. Thuật toán Reinforcement Learning được triển khai để tối ưu quyết định định tuyến dựa trên trạng thái mạng và kết quả dự đoán lưu lượng, từ đó nâng cao hiệu quả điều khiển lưu lượng trong mạng ISP.
+
+    \item \textbf{Xây dựng mô hình dự đoán lưu lượng:}
+    
+    Thiết kế mô hình dự đoán lưu lượng mạng sử dụng mạng nơ-ron hồi tiếp LSTM (Long Short-Term Memory) nhằm dự đoán lưu lượng trong các khoảng thời gian tiếp theo dựa trên dữ liệu lịch sử. Đầu ra của mô hình là giá trị lưu lượng dự đoán trong các khoảng thời gian tiếp theo trên các liên kết mạng. Kết quả dự đoán này được sử dụng làm thông tin đầu vào cho mô-đun Traffic Engineering, kết hợp với trạng thái mạng hiện tại để hỗ trợ tác tử RL đưa ra quyết định điều khiển lưu lượng chủ động.
+
+    \item \textbf{Xây dựng cơ chế tối ưu Traffic Engineering:}
+    
+    Xây dựng cơ chế Traffic Engineering sử dụng Reinforcement Learning. Tác tử RL nhận trạng thái mạng hiện tại, bao gồm mức sử dụng các liên kết và các thông tin hiệu năng mạng, kết hợp với thông tin lưu lượng được dự đoán từ mô hình Federated Learning. Dựa trên trạng thái này, RL học chính sách lựa chọn tuyến đường hoặc phương án phân bổ lưu lượng cho các luồng nhằm giảm tắc nghẽn, giảm độ trễ, cân bằng tải và nâng cao hiệu quả sử dụng tài nguyên mạng. Quyết định điều khiển của FL được chuyển đến SDN Controller để thực thi thông qua các quy tắc chuyển tiếp trên mạng.
+
+    \item \textbf{Tích hợp và triển khai hệ thống:}
+    
+    Tích hợp mô hình Traffic Prediction dựa trên Federated Learning với mô-đun Traffic Engineering sử dụng Reinforcement Learning trong kiến trúc SDN. Kết quả dự đoán lưu lượng được kết hợp với trạng thái mạng hiện tại để hỗ trợ RL đưa ra quyết định điều khiển lưu lượng. Các quyết định này được chuyển đến SDN Controller để thực thi trên topo NSFNET trong môi trường Mininet.
+
+    \item \textbf{Thực nghiệm và đánh giá:}
+    
+    Thực hiện các kịch bản thực nghiệm trên topo NSFNET với nhiều mức tải mạng khác nhau, bao gồm lưu lượng bình thường, lưu lượng tăng đột biến và các trường hợp xảy ra tắc nghẽn trên một hoặc nhiều liên kết. Hệ thống được đánh giá thông qua các chỉ số dự đoán lưu lượng như MAE, RMSE, MAPE và các chỉ số Traffic Engineering như độ trễ đầu cuối, thông lượng, tỷ lệ sử dụng liên kết, tỷ lệ mất gói, mức độ cân bằng tải, thời gian hội tụ và các thông số khác. Kết quả được so sánh với các phương pháp định tuyến truyền thống và mô hình học tập trung để đánh giá khả năng cải thiện độ chính xác dự đoán và hiệu quả điều khiển lưu lượng.
+\end{enumerate}
