@@ -3,11 +3,11 @@
 \begin{enumerate}
     \item \textbf{Thu thập và phân tích dữ liệu:}
     
-    Thu thập các bộ dữ liệu lưu lượng mạng từ các nguồn công khai hoặc môi trường mô phỏng, bao gồm thông tin về băng thông, độ trễ, tỷ lệ mất gói và mức sử dụng liên kết theo thời gian. Tiến hành tiền xử lý dữ liệu bằng cách loại bỏ giá trị bất thường, chuẩn hóa dữ liệu và trích xuất các đặc trưng cần thiết phục vụ cho quá trình huấn luyện mô hình. Đồng thời phân chia dữ liệu theo các nút hoặc miền mạng để mô phỏng quá trình huấn luyện phân tán trong Federated Learning.
+    Thu thập các bộ dữ liệu lưu lượng mạng từ các nguồn công khai (như Abilene, GÉANT) hoặc \textit{(for Kiet, if you dont want this then remove)} chủ động tạo tập dữ liệu tổng hợp (Synthetic Data) bằng mô hình hấp dẫn (Gravity Model) cho topo NSFNET. Tập dữ liệu bao gồm thông tin về băng thông, độ trễ, tỷ lệ mất gói và mức sử dụng liên kết. Tiến hành tiền xử lý dữ liệu bằng cách loại bỏ giá trị bất thường, chuẩn hóa dữ liệu, tạo cửa sổ thời gian (Sliding window) và trích xuất các đặc trưng cần thiết phục vụ cho quá trình huấn luyện mô hình. Dữ liệu được phân chia theo 3 miền mạng để mô phỏng quá trình huấn luyện phân tán trong Federated Learning.
 
     \item \textbf{Môi trường triển khai:}
 
-    Hệ thống được triển khai trên nền tảng mã nguồn mở với hệ điều hành Ubuntu và ngôn ngữ lập trình Python nhằm đảm bảo tính linh hoạt và khả năng mở rộng. Mạng SDN được mô phỏng bằng Mininet sử dụng topo NSFNET, kết hợp bộ điều khiển Ryu thông qua giao thức OpenFlow. Mô hình dự đoán lưu lượng được xây dựng bằng PyTorch và huấn luyện theo cơ chế Federated Learning với framework Flower, sử dụng mô hình LSTM và thuật toán FedAdam. Thuật toán Reinforcement Learning được triển khai để tối ưu quyết định định tuyến dựa trên trạng thái mạng và kết quả dự đoán lưu lượng, từ đó nâng cao hiệu quả điều khiển lưu lượng trong mạng ISP.
+    Hệ thống được triển khai trên nền tảng Ubuntu với ngôn ngữ Python. Quá trình triển khai chia làm hai giai đoạn: \textit{(For me/Kiet)} Giai đoạn huấn luyện sử dụng môi trường mô phỏng Gym (OpenAI Gymnasium) tùy chỉnh với mô hình tính toán độ trễ M/M/1 để tăng tốc độ huấn luyện RL; Giai đoạn đánh giá và demo sử dụng Mininet với topo NSFNET và bộ điều khiển Ryu (OpenFlow 1.3). Mô hình dự đoán lưu lượng dùng PyTorch, huấn luyện Federated Learning với framework Flower (FedAvg). Thuật toán Reinforcement Learning (PPO) được triển khai để tối ưu quyết định định tuyến dựa trên trạng thái mạng và kết quả dự đoán lưu lượng, nâng cao hiệu quả mạng ISP.
 
     \item \textbf{Xây dựng mô hình dự đoán lưu lượng:}
     
@@ -15,7 +15,7 @@
 
     \item \textbf{Xây dựng cơ chế tối ưu Traffic Engineering:}
     
-    Xây dựng cơ chế Traffic Engineering sử dụng Reinforcement Learning. Tác tử RL nhận trạng thái mạng hiện tại, bao gồm mức sử dụng các liên kết và các thông tin hiệu năng mạng, kết hợp với thông tin lưu lượng được dự đoán từ mô hình Federated Learning. Dựa trên trạng thái này, RL học chính sách lựa chọn tuyến đường hoặc phương án phân bổ lưu lượng cho các luồng nhằm giảm tắc nghẽn, giảm độ trễ, cân bằng tải và nâng cao hiệu quả sử dụng tài nguyên mạng. Quyết định điều khiển của FL được chuyển đến SDN Controller để thực thi thông qua các quy tắc chuyển tiếp trên mạng.
+    Xây dựng cơ chế Traffic Engineering sử dụng Reinforcement Learning (PPO). \textit{(For me)} Bài toán được mô hình hóa thành MDP: Trạng thái (State) gồm 104 chiều (mức sử dụng 42 liên kết hiện tại, 42 dự đoán tương lai, 20 nhu cầu lưu lượng); Hành động (Action) là không gian rời rạc (MultiDiscrete) chọn 1 trong 3 đường đi (K=3) cho top 20 luồng giao thông lớn nhất; Phần thưởng (Reward) được tính bằng hàm phạt trọng số dựa trên MLU (Maximum Link Utilization), độ trễ đầu cuối và tỷ lệ mất gói (dựa trên mô hình hàng đợi M/M/1). Quyết định điều khiển sẽ được chuyển đến SDN Controller để thực thi thông qua việc cập nhật các quy tắc chuyển tiếp (Flow Rules) trên mạng.
 
     \item \textbf{Tích hợp và triển khai hệ thống:}
     

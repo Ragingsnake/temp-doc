@@ -35,18 +35,22 @@
 
 % Nội dung 2
 
-\ganttgroup{Nội dung 2: Thiết kế và xây dựng hệ thống}{4}{9} \\
+\ganttgroup{Nội dung 2: Thiết kế và xây dựng hệ thống}{4}{8} \\
 \ganttbar{Thiết kế kiến trúc hệ thống}{4}{5} \\
-\ganttbar{Xây dựng mô hình Federated Learning dự đoán lưu lượng}{5}{7} \\
-\ganttbar{Xây dựng mô hình Reinforcement Learning tối ưu TE}{5}{7} \\
-\ganttbar{Tích hợp các thành phần của hệ thống}{7}{9} \\
+\ganttbar{Xây dựng mô hình FL dự đoán lưu lượng}{5}{6} \\
+\ganttbar{Xây dựng Gym env và mô hình RL (PPO)}{6}{8} \\
+
+% Tích hợp
+
+\ganttgroup{Tích hợp FL và RL}{9}{9} \\
+\ganttbar{Kết nối dự đoán FL vào không gian trạng thái RL}{9}{9} \\
 
 % Nội dung 3
 
 \ganttgroup{Nội dung 3: Triển khai hệ thống mô phỏng và demo}{10}{12} \\
-\ganttbar{Xây dựng môi trường mô phỏng mạng}{10}{10} \\
+\ganttbar{Xây dựng môi trường Mininet + Ryu Controller}{10}{10} \\
 \ganttbar{Phát triển chương trình demo và dashboard}{10}{11} \\
-\ganttbar{Kiểm thử và hoàn thiện hệ thống}{11}{12} \\
+\ganttbar{Xác thực RL Gym với Mininet và hoàn thiện}{11}{12} \\
 
 % Nội dung 4
 

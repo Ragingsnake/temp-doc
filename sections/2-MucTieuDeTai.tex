@@ -11,7 +11,7 @@ Mục tiêu của đề tài là xây dựng hệ thống dự đoán lưu lư�
 
     \item \textbf{Xây dựng mô hình dự đoán lưu lượng:} sử dụng Federated Learning để huấn luyện mô hình LSTM trên dữ liệu lưu lượng phân tán tại các miền mạng. Mô hình được sử dụng để dự đoán lưu lượng trong các khoảng thời gian tiếp theo. Kết quả dự đoán được cung cấp cho mô-đun Traffic Engineering để hỗ trợ quyết định điều khiển lưu lượng theo hướng chủ động.
 
-    \item \textbf{Xây dựng mô hình điều khiển định tuyến:} sử dụng Reinforcement Learning để lựa chọn tuyến hoặc phương án phân bổ lưu lượng dựa trên trạng thái mạng hiện tại và lưu lượng được dự đoán. Tác tử RL hướng đến giảm tắc nghẽn, giảm độ trễ, cân bằng tải và nâng cao hiệu quả sử dụng tài nguyên mạng. Quyết định của tác tử được chuyển đến SDN Controller để thực thi trên mạng.
+    \item \textbf{Xây dựng mô hình điều khiển định tuyến:} \textit{(For me)} sử dụng thuật toán Reinforcement Learning (cụ thể là PPO) để giải quyết bài toán định tuyến như một quá trình ra quyết định Markov (MDP). Trạng thái (State) bao gồm mức sử dụng liên kết, kết quả dự đoán và nhu cầu lưu lượng. Hành động (Action) là việc chọn 1 trong K đường đi ngắn nhất (K-shortest paths) cho từng luồng dữ liệu lớn. Hàm phần thưởng (Reward) hướng đến cực tiểu hóa Maximum Link Utilization (MLU), độ trễ và tỷ lệ mất gói. Quyết định của tác tử được chuyển đến SDN Controller để thực thi.
 
     \item \textbf{Triển khai và tích hợp hệ thống:} tích hợp mô hình Federated Learning, Reinforcement Learning và bộ điều khiển SDN nhằm tạo thành hệ thống điều khiển lưu lượng hoạt động thống nhất trong môi trường mô phỏng.
 

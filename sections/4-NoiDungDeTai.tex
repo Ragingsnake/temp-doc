@@ -37,12 +37,12 @@
 
     Quy trình hoạt động của hệ thống demo gồm các bước:
     \begin{enumerate}
-        \item Khởi tạo topo mạng và các luồng truyền dữ liệu.
-        \item Thu thập thông tin lưu lượng trên từng liên kết.
-        \item Dự đoán lưu lượng trong khoảng thời gian tiếp theo bằng mô hình Federated Learning.
-        \item Đưa kết quả dự đoán vào tác tử Reinforcement Learning để lựa chọn tuyến truyền tối ưu.
-        \item Cập nhật đường đi của lưu lượng trên mạng.
-        \item Hiển thị kết quả trực quan thông qua dashboard gồm topology mạng, lưu lượng trên từng liên kết, mức sử dụng băng thông, tuyến truyền trước và sau tối ưu, thông lượng, độ trễ và tỷ lệ mất gói.
+        \item Khởi tạo topo mạng (NSFNET) và các luồng truyền dữ liệu bằng iperf3 \textit{(for Kiet, if you dont want this then remove)}.
+        \item Thu thập thống kê lưu lượng định kỳ (mỗi 5 giây) từ các switch qua Ryu Controller.
+        \item Dự đoán lưu lượng cho cửa sổ thời gian tiếp theo (15 phút tới) bằng mô hình toàn cục Federated Learning.
+        \item Đưa kết quả dự đoán và trạng thái hiện tại vào tác tử RL (chạy quyết định mỗi 30 giây) để chọn tuyến truyền tối ưu.
+        \item Chỉ cập nhật OpenFlow rules (chỉ cho các luồng bị đổi tuyến) trên Mininet từ switch đích ngược về nguồn để tránh mất gói \textit{(for Kiet, if you dont want this then remove)}.
+        \item Hiển thị kết quả trực quan thông qua dashboard (Streamlit/Grafana) theo thời gian thực về topology mạng, lưu lượng trên từng liên kết, mức sử dụng băng thông, MLU, thông lượng, độ trễ và tỷ lệ mất gói.
     \end{enumerate}
 \end{itemize}
 
@@ -55,7 +55,7 @@
 
     \item \textbf{Phương pháp thực hiện:}
 
-    Xây dựng các kịch bản thực nghiệm gồm lưu lượng bình thường, lưu lượng tăng đột biến, hiện tượng tắc nghẽn trên một hoặc nhiều liên kết và sự thay đổi lưu lượng theo thời gian. Thực hiện so sánh giữa phương pháp đề xuất với các phương pháp định tuyến truyền thống hoặc các mô hình không sử dụng Federated Learning.
+    Xây dựng 5 kịch bản thực nghiệm: lưu lượng bình thường, tăng đột biến (Traffic Spike), tăng dần đều, Flash Crowd, và sự cố đứt liên kết (Link Failure). \textit{(for Kiet, if you dont want this then remove)} Đánh giá tính ý nghĩa thống kê bằng cách chạy 5 seeds khác nhau. Thực hiện so sánh phương pháp đề xuất với 4 mô hình cơ sở (Baselines): OSPF (Shortest Path), ECMP (Cân bằng tải đa đường), RL thuần (không có dự đoán - Reactive TE), và Mô hình RL kết hợp Dự đoán tập trung (Centralized LSTM, không dùng FL).
 
     Các chỉ số đánh giá bao gồm:
     \begin{itemize}

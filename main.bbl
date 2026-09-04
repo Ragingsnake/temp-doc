@@ -1,0 +1,512 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{li2024core}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=484cf8dbf36f2f044954fa895f4d3ab7}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Pengyu},
+           giveni={P\bibinitperiod}}}%
+        {{hash=27f86c7ec29709d3094c39450eb2e121}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yanhua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ac34f18c578e4038763ade925835558f}{%
+           family={Yingji},
+           familyi={Y\bibinitperiod},
+           given={Shi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d691d024ef14004a468abbf705feaf7a}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Feng},
+           giveni={F\bibinitperiod}}}%
+        {{hash=9216bdc439220a2ff5066b15d900d982}{%
+           family={Fanqin},
+           familyi={F\bibinitperiod},
+           given={Zhou},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{40dbb5b252c00685ea4146edc725bf27}
+      \strng{fullhash}{93694cff3b0178f65291d87d27023557}
+      \strng{fullhashraw}{93694cff3b0178f65291d87d27023557}
+      \strng{bibnamehash}{8406b4859f38ba58b649d80b76aa01c4}
+      \strng{authorbibnamehash}{8406b4859f38ba58b649d80b76aa01c4}
+      \strng{authornamehash}{40dbb5b252c00685ea4146edc725bf27}
+      \strng{authorfullhash}{93694cff3b0178f65291d87d27023557}
+      \strng{authorfullhashraw}{93694cff3b0178f65291d87d27023557}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Scientific Reports}
+      \field{number}{1}
+      \field{title}{Core network traffic prediction based on vertical federated learning and split learning}
+      \field{volume}{14}
+      \field{year}{2024}
+      \field{pages}{4663}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://10.1038/s41598-024-53193-y
+      \endverb
+    \endentry
+    \entry{gao2024communication}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=1148719a7190aa002d3e58e570d3d415}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Fuwei},
+           giveni={F\bibinitperiod}}}%
+        {{hash=2f99e27e5d5cda038302dbca92215d93}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Chuanting},
+           giveni={C\bibinitperiod}}}%
+        {{hash=97835f60e9a0edc4363940e9ce7f64cd}{%
+           family={Qiao},
+           familyi={Q\bibinitperiod},
+           given={Jingping},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f90afe81506caa50806828ae807765b0}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Kaiqiang},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5d448c7ef3c89e7138522e57768e1ed5}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{24d4bdade427b8117ff98337a477a0cd}
+      \strng{fullhash}{d6f83a032f9078a486d9df927354c7ae}
+      \strng{fullhashraw}{d6f83a032f9078a486d9df927354c7ae}
+      \strng{bibnamehash}{9f33856b9711ef8e9dd979fb84d09e72}
+      \strng{authorbibnamehash}{9f33856b9711ef8e9dd979fb84d09e72}
+      \strng{authornamehash}{24d4bdade427b8117ff98337a477a0cd}
+      \strng{authorfullhash}{d6f83a032f9078a486d9df927354c7ae}
+      \strng{authorfullhashraw}{d6f83a032f9078a486d9df927354c7ae}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematics}
+      \field{number}{16}
+      \field{title}{Communication-Efficient Wireless Traffic Prediction with Federated Learning}
+      \field{volume}{12}
+      \field{year}{2024}
+      \field{pages}{2539}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.3390/math12162539
+      \endverb
+    \endentry
+    \entry{zhao2024federated}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=e63001f7719456dc84240f12ddadade2}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Junhui},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9a4f4a1ff661cd600eb26523a5ba8bb4}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=bc63d195cc36a017c921310c2653b76f}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ran},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8c80339d4347ebf1a00539a7b967dd58}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Yating},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=29fb94ebd8a9f97e2e48f20bd5e34e62}{%
+           family={Sheng},
+           familyi={S\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ade7d203f8ee404fb9cdc3775b6d6b5}
+      \strng{fullhash}{371f4d9b16fbb7a07b6781f596982640}
+      \strng{fullhashraw}{371f4d9b16fbb7a07b6781f596982640}
+      \strng{bibnamehash}{fb8ad861fd70d6b39fdae289d52ade8f}
+      \strng{authorbibnamehash}{fb8ad861fd70d6b39fdae289d52ade8f}
+      \strng{authornamehash}{0ade7d203f8ee404fb9cdc3775b6d6b5}
+      \strng{authorfullhash}{371f4d9b16fbb7a07b6781f596982640}
+      \strng{authorfullhashraw}{371f4d9b16fbb7a07b6781f596982640}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0038-0644}
+      \field{journaltitle}{Software: Practice and Experience}
+      \field{title}{Federated Learning-Based Mobile Traffic Prediction in Satellite-Terrestrial Integrated Networks}
+      \field{volume}{55}
+      \field{year}{2025}
+      \field{pages}{613\bibrangedash 628}
+      \range{pages}{16}
+      \verb{doi}
+      \verb https://doi.org/10.1002/spe.3386
+      \endverb
+      \keyw{deep learning,federated learning,graph neural networks,mobile communication}
+    \endentry
+    \entry{dake2021traffic}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=619840a73c1e647c07fdb25b6a05a205}{%
+           family={Dake},
+           familyi={D\bibinitperiod},
+           given={Delali\bibnamedelima Kwasi},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=6346f1a630c475336f995362c2419949}{%
+           family={Gadze},
+           familyi={G\bibinitperiod},
+           given={James\bibnamedelima Dzisi},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=e97779820c101f382f9ac8d1eb3054f2}{%
+           family={Klogo},
+           familyi={K\bibinitperiod},
+           given={Griffith\bibnamedelima Selorm},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3464ad949f19e054f4d6c5f417156ba5}{%
+           family={Nunoo-Mensah},
+           familyi={N\bibinithyphendelim M\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e595e7c78f9b83c523e873049d1d55dc}
+      \strng{fullhash}{bccf5b9a279c06d058e91eb0eb2cc18f}
+      \strng{fullhashraw}{bccf5b9a279c06d058e91eb0eb2cc18f}
+      \strng{bibnamehash}{49ebfe173987b96d1bbb744cc9b50768}
+      \strng{authorbibnamehash}{49ebfe173987b96d1bbb744cc9b50768}
+      \strng{authornamehash}{e595e7c78f9b83c523e873049d1d55dc}
+      \strng{authorfullhash}{bccf5b9a279c06d058e91eb0eb2cc18f}
+      \strng{authorfullhashraw}{bccf5b9a279c06d058e91eb0eb2cc18f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Computer Science and Applications}
+      \field{number}{5}
+      \field{title}{Traffic Engineering in Software-defined Networks using Reinforcement Learning: A Review}
+      \field{volume}{12}
+      \field{year}{2021}
+      \verb{doi}
+      \verb https://doi.org/10.14569/IJACSA.2021.0120541
+      \endverb
+      \keyw{Software defined networking,reinforcement learning,machine learning,traffic engineering}
+    \endentry
+    \entry{aljameel2022reinforcement}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=d8715550fbdc16401521029249830cfb}{%
+           family={Al\bibnamedelima Jameel},
+           familyi={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Mohammed},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a679481af2cb072b31875675703c5d3e}{%
+           family={Kanakis},
+           familyi={K\bibinitperiod},
+           given={Triantafyllos},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a7ab26adbc1cf85c4729d5ea1192edbb}{%
+           family={Turner},
+           familyi={T\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7988fc8cf409bd6de8df14292a97e137}{%
+           family={Al-Sherbaz},
+           familyi={A\bibinithyphendelim S\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=398b25e9d5b10871e3147f663d6ec149}{%
+           family={Bhaya},
+           familyi={B\bibinitperiod},
+           given={Wesam\bibnamedelima S.},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c75d1293d36372bf915be7247fbb215c}
+      \strng{fullhash}{e1ed5ad0cf56655d86549fd6292dd64f}
+      \strng{fullhashraw}{e1ed5ad0cf56655d86549fd6292dd64f}
+      \strng{bibnamehash}{821d62c7d4034dc5a9b6997f8e772cc8}
+      \strng{authorbibnamehash}{821d62c7d4034dc5a9b6997f8e772cc8}
+      \strng{authornamehash}{c75d1293d36372bf915be7247fbb215c}
+      \strng{authorfullhash}{e1ed5ad0cf56655d86549fd6292dd64f}
+      \strng{authorfullhashraw}{e1ed5ad0cf56655d86549fd6292dd64f}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{15}
+      \field{title}{A Reinforcement Learning-Based Routing for Real-Time Multimedia Traffic Transmission over Software-Defined Networking}
+      \field{volume}{11}
+      \field{year}{2022}
+      \field{pages}{2441}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.3390/electronics11152441
+      \endverb
+      \keyw{Software-defined networks,Federated learning,Reinforcement learning,Load balancing,Asynchronous aggregation,Network optimization,Hierarchical controllers,Edge computing,Multi-agent systems,Privacy preservation}
+    \endentry
+    \entry{wang2026deep}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=4961ef09090a1689d50852fd4f748bf0}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chengjin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a8e5a67a5e6cf00df254d6e51e320d96}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yanfei},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=1eb288432f5d3a0ea3b4a0f2d8cc2a68}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jingyu},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ab5652acf0de64074be2a35319b7c36a}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Qian},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=ad699cc0ff44aa8ef2a872dab8e20175}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e27a7feb01bbc111fc2b7476ed3577e7}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Ziang},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=ad41d40fe405d67f4e5f15a5f371aa00}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jieling},
+           giveni={J\bibinitperiod}}}%
+        {{hash=90ea174e8cf93b1be0a5f0d29098868d}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Cheng},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{3506e473cff31f106a247fa0e087a060}
+      \strng{fullhash}{47cd469eff479e627118ef3d5794b348}
+      \strng{fullhashraw}{47cd469eff479e627118ef3d5794b348}
+      \strng{bibnamehash}{7ab0446d7dc747b70aa3607d9cfdb64b}
+      \strng{authorbibnamehash}{7ab0446d7dc747b70aa3607d9cfdb64b}
+      \strng{authornamehash}{3506e473cff31f106a247fa0e087a060}
+      \strng{authorfullhash}{47cd469eff479e627118ef3d5794b348}
+      \strng{authorfullhashraw}{47cd469eff479e627118ef3d5794b348}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{King Saud University Computer and Information Sciences}
+      \field{title}{Deep reinforcement learning for SDN routing optimization enhanced by graph multi-head attention}
+      \field{year}{2026}
+      \verb{doi}
+      \verb https://doi.org/10.1007/s44443-026-00809-0
+      \endverb
+    \endentry
+    \entry{aouedi2025deep}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=c774d2ae7e05cc111480149cdfadefe7}{%
+           family={Aouedi},
+           familyi={A\bibinitperiod},
+           given={Ons},
+           giveni={O\bibinitperiod}}}%
+        {{hash=0a1a45e586984f7fea4b404c417a6666}{%
+           family={Le},
+           familyi={L\bibinitperiod},
+           given={Van\bibnamedelima An},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e6d1e33a95cc69778ba087ae139d6dc5}{%
+           family={Piamrat},
+           familyi={P\bibinitperiod},
+           given={Kanchana},
+           giveni={K\bibinitperiod}}}%
+        {{hash=106cbaef5d4e5beafa3291a000c76a92}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={Yusheng},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{a4d9c0a367a9f81d998a9bfd4e4e436c}
+      \strng{fullhash}{605277c3251ace57a0c5fa37d11fe7ba}
+      \strng{fullhashraw}{605277c3251ace57a0c5fa37d11fe7ba}
+      \strng{bibnamehash}{99c6dc9127ec8c160aaee0f2e394b4d6}
+      \strng{authorbibnamehash}{99c6dc9127ec8c160aaee0f2e394b4d6}
+      \strng{authornamehash}{a4d9c0a367a9f81d998a9bfd4e4e436c}
+      \strng{authorfullhash}{605277c3251ace57a0c5fa37d11fe7ba}
+      \strng{authorfullhashraw}{605277c3251ace57a0c5fa37d11fe7ba}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Computing Surveys}
+      \field{number}{6}
+      \field{title}{Deep Learning on Network Traffic Prediction: Recent Advances, Analysis, and Future Directions}
+      \field{volume}{57}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 37}
+      \range{pages}{37}
+      \verb{doi}
+      \verb https://doi.org/10.1145/3703447
+      \endverb
+      \keyw{Deep learning,machine learning,network traffic prediction,networkmanagemen}
+    \endentry
+    \entry{jha2026asynchronous}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=9e8164c5d0e56e2a1904433f89368ed2}{%
+           family={Jha},
+           familyi={J\bibinitperiod},
+           given={Apratim.\bibnamedelimi K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=064b21dba6ae754f4d169db6b0bc47b3}{%
+           family={Mahendran},
+           familyi={M\bibinitperiod},
+           given={Anand.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d71c75a3158e3226f6761ba5f061683a}{%
+           family={Ghafir},
+           familyi={G\bibinitperiod},
+           given={Ibrahim.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1f024b0c16198e3221588550b2963757}{%
+           family={Hamada},
+           familyi={H\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{847ddda252fb662b2b50163cc6cb3c65}
+      \strng{fullhash}{18490c6b54d48854aec7f1349b45f93e}
+      \strng{fullhashraw}{18490c6b54d48854aec7f1349b45f93e}
+      \strng{bibnamehash}{fc83e9ab9e765e0cc11c9477eaedc35f}
+      \strng{authorbibnamehash}{fc83e9ab9e765e0cc11c9477eaedc35f}
+      \strng{authornamehash}{847ddda252fb662b2b50163cc6cb3c65}
+      \strng{authorfullhash}{18490c6b54d48854aec7f1349b45f93e}
+      \strng{authorfullhashraw}{18490c6b54d48854aec7f1349b45f93e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Discover Computing}
+      \field{number}{320}
+      \field{title}{Asynchronous federated reinforcement learning for scalable load balancing in software-defined networks}
+      \field{volume}{29}
+      \field{year}{2026}
+      \verb{doi}
+      \verb https://doi.org/10.1007/s10791-026-10147-4
+      \endverb
+      \keyw{Software-defined networks,Federated learning,Reinforcement learning,Load balancing,Asynchronous aggregation,Network optimization,Hierarchical controllers,Edge computing,Multi-agent systems,Privacy preservation}
+    \endentry
+    \entry{gunavathie2020survey}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=568f21ef71251af7116074aa7cba6ffe}{%
+           family={Gunavathie},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=53b28d4661b5e1e76d215fceb6922fc9}{%
+           family={UmaMaheswari},
+           familyi={U\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5f4fd9df87ef43dd012b0a55270da074}
+      \strng{fullhash}{5f4fd9df87ef43dd012b0a55270da074}
+      \strng{fullhashraw}{5f4fd9df87ef43dd012b0a55270da074}
+      \strng{bibnamehash}{5f4fd9df87ef43dd012b0a55270da074}
+      \strng{authorbibnamehash}{5f4fd9df87ef43dd012b0a55270da074}
+      \strng{authornamehash}{5f4fd9df87ef43dd012b0a55270da074}
+      \strng{authorfullhash}{5f4fd9df87ef43dd012b0a55270da074}
+      \strng{authorfullhashraw}{5f4fd9df87ef43dd012b0a55270da074}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Science and Technology}
+      \field{title}{A Survey on Traffic Prediction and Classification in SDN}
+      \field{volume}{37}
+      \field{year}{2020}
+      \true{nocite}
+      \field{pages}{367\bibrangedash 375}
+      \range{pages}{9}
+      \verb{doi}
+      \verb https://doi/10.3233/APC200168
+      \endverb
+      \keyw{SDN,Traffic Prediction,Traffic Classification}
+    \endentry
+    \entry{aouedi2022intelligent}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=c774d2ae7e05cc111480149cdfadefe7}{%
+           family={Aouedi},
+           familyi={A\bibinitperiod},
+           given={Ons},
+           giveni={O\bibinitperiod}}}%
+        {{hash=e6d1e33a95cc69778ba087ae139d6dc5}{%
+           family={Piamrat},
+           familyi={P\bibinitperiod},
+           given={Kanchana},
+           giveni={K\bibinitperiod}}}%
+        {{hash=60ea4dd3d8cb1df922a87cae0b4da9de}{%
+           family={Parrein},
+           familyi={P\bibinitperiod},
+           given={Benoit},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{a4d9c0a367a9f81d998a9bfd4e4e436c}
+      \strng{fullhash}{1ff2d49774a6c6f60fabfc282c9055d3}
+      \strng{fullhashraw}{1ff2d49774a6c6f60fabfc282c9055d3}
+      \strng{bibnamehash}{1ff2d49774a6c6f60fabfc282c9055d3}
+      \strng{authorbibnamehash}{1ff2d49774a6c6f60fabfc282c9055d3}
+      \strng{authornamehash}{a4d9c0a367a9f81d998a9bfd4e4e436c}
+      \strng{authorfullhash}{1ff2d49774a6c6f60fabfc282c9055d3}
+      \strng{authorfullhashraw}{1ff2d49774a6c6f60fabfc282c9055d3}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Future Internet}
+      \field{number}{2}
+      \field{title}{Intelligent Traffic Management in Next-Generation Networks}
+      \field{volume}{14}
+      \field{year}{2022}
+      \true{nocite}
+      \field{pages}{44}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1145/3703447
+      \endverb
+      \keyw{Deep learning,machine learning,network traffic prediction,networkmanagemen}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
