@@ -5,10 +5,12 @@ on:
     branches: [ "main" ]
     paths:
       - 'prototype/**'
+      - '.github/workflows/**'
   pull_request:
     branches: [ "main" ]
     paths:
       - 'prototype/**'
+      - '.github/workflows/**'
 
 jobs:
   build-and-test:
@@ -44,3 +46,7 @@ jobs:
     - name: Smoke test (End-to-End Quick Pipeline)
       run: |
         python scripts/run_full_pipeline.py --quick
+
+    - name: Multi-Topology Demo Verification
+      run: |
+        python -m scripts.demo --topology all --steps 5 --seeds 42 --no_random
