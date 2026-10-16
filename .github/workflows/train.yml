@@ -1,0 +1,113 @@
+name: Train Models Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      topology:
+        description: 'Network topology to train (geant, nsfnet, abilene, all)'
+        required: true
+        default: 'geant'
+        type: choice
+        options:
+          - geant
+          - nsfnet
+          - abilene
+          - all
+      rl_timesteps:
+        description: 'Total timesteps to train PPO RL agent'
+        required: true
+        default: '102400'
+        type: string
+      use_recurrent:
+        description: 'Use RecurrentPPO (MlpLstmPolicy) to eliminate route flapping?'
+        required: false
+        default: true
+        type: boolean
+      train_fl:
+        description: 'Retrain Federated Learning (FL) model before RL training?'
+        required: false
+        default: false
+        type: boolean
+      fl_rounds:
+        description: 'Number of FL rounds (only used if train_fl is checked)'
+        required: false
+        default: '20'
+        type: string
+
+jobs:
+  train-models:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    defaults:
+      run:
+        working-directory: prototype
+
+    steps:
+    - name: Checkout thesis repository
+      uses: actions/checkout@v4
+
+    - name: Checkout prototype repository
+      uses: actions/checkout@v4
+      with:
+        repository: Ragingsnake/ryu-fl-rl-traffic-controller
+        path: prototype
+        fetch-depth: 0
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+        cache-dependency-path: 'prototype/requirements.txt'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Generate Traffic Data & Preprocess
+      run: |
+        python data/generate_tm.py --topology ${{ inputs.topology }}
+        python data/preprocess.py --topology ${{ inputs.topology }}
+
+    - name: Train Federated Learning (FL) Model
+      if: ${{ inputs.train_fl == true }}
+      run: |
+        if [ "${{ inputs.topology }}" = "all" ]; then
+          for t in nsfnet geant abilene; do
+            python fl/train_fl.py --topology $t --rounds ${{ inputs.fl_rounds }}
+          done
+        else
+          python fl/train_fl.py --topology ${{ inputs.topology }} --rounds ${{ inputs.fl_rounds }}
+        fi
+
+    - name: Train Reinforcement Learning (RL) Agent
+      run: |
+        if [ "${{ inputs.topology }}" = "all" ]; then
+          for t in nsfnet geant abilene; do
+            ARGS="--topology $t --timesteps ${{ inputs.rl_timesteps }}"
+            if [ "${{ inputs.use_recurrent }}" = "true" ]; then
+              ARGS="$ARGS --recurrent"
+            fi
+            python rl/train_rl.py $ARGS
+          done
+        else
+          ARGS="--topology ${{ inputs.topology }} --timesteps ${{ inputs.rl_timesteps }}"
+          if [ "${{ inputs.use_recurrent }}" = "true" ]; then
+            ARGS="$ARGS --recurrent"
+          fi
+          python rl/train_rl.py $ARGS
+        fi
+
+    - name: Export Trained Models as Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: trained-models-${{ inputs.topology }}
+        path: |
+          prototype/models/ppo_agent*.zip
+          prototype/models/fl_global_model*.pt
+          prototype/results/demo/**/*.png
+        if-no-files-found: warn
+        retention-days: 30
